@@ -53,8 +53,8 @@
                 const payload ={
                     product_name: this.product_name,
                     product_type: this.product_type,
-                    product_company: this.product_id,
-                    product_id: this.pro_company,
+                    product_company: this.pro_company,
+                    product_id: this.product_id,
                     base_price: this.baseprice,
                     selling_price: this.sellingprice,
                    

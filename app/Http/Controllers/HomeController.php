@@ -18,4 +18,7 @@ class HomeController extends Controller
    public function show(){
       return Inertia::render('Table');
    }  
+   public function customer(){
+      return Inertia::render('customers');
+   }
 }

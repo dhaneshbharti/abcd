@@ -29,6 +29,13 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->name('dashboard');
 
-Route::get('createpro',[Homecontroller::class,'store']);
-Route::get('createcust',[Homecontroller::class,'save']);
-Route::get('table',[HomeController::class,'show']);
+
+
+Route::group(['middleware' => 'auth'], function(){
+
+    Route::get('createcust',[Homecontroller::class,'save']);
+    Route::get('createpro',[Homecontroller::class,'store']);
+    Route::get('table',[HomeController::class,'show']);
+    Route::get('customerlist',[HomeController::class,'customer']);
+
+});
