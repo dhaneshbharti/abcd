@@ -21,4 +21,14 @@ class HomeController extends Controller
    public function customer(){
       return Inertia::render('customers');
    }
+   public function ads(){
+       return Inertia::render('Newdashboard');
+   }
+   public function Table(){
+       return Inertia::render('Brand');
+   }
+
+    public function dev(){
+        return Inertia::render('Categories_form');
+    }
 }

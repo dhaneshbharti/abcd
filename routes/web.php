@@ -34,8 +34,12 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::group(['middleware' => 'auth'], function(){
 
     Route::get('createcust',[Homecontroller::class,'save']);
-    Route::get('createpro',[Homecontroller::class,'store']);
+
     Route::get('table',[HomeController::class,'show']);
     Route::get('customerlist',[HomeController::class,'customer']);
 
 });
+Route::get('createpro',[Homecontroller::class,'store']);
+Route::get('newdashboard',[HomeController::class,'ads']);
+Route::get('brand',[HomeController::class,'Table']);
+Route::get('category',[Homecontroller::class,'dev']);

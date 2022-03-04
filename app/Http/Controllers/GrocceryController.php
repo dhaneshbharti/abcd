@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Brand;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Customer;
@@ -22,6 +23,10 @@ class GrocceryController extends Controller
   }
   public function show(){
     $data=Customer::all();  
+    return response()->json(['data' => $data], 200);
+
+  }public function brand(){
+    $data=Brand::all();
     return response()->json(['data' => $data], 200);
 
   }
